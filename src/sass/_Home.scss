@@ -1,0 +1,155 @@
+.Home {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  .home {
+    &-header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &-scramble {
+        color: $secondaryColor;
+        text-align: center;
+      }
+      &-change-cube {
+        position: relative;
+        margin-bottom: 20px;
+        &-current-cube {
+          background-color: $accentColor;
+          height: 40px;
+          width: 150px;
+          font-weight: 600;
+          border-radius: 5px;
+          transition: 0.2s all ease-in-out;
+
+          h3 {
+            height: 100%;
+            width: 100%;
+            padding: 0px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+
+          &:hover {
+            background-color: $primaryBackgroundColor;
+            color: $secondaryColor;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3),
+              -5px 5px 5px rgba(0, 0, 0, 0.3);
+          }
+        }
+        &-list {
+          width: 150px;
+          padding: 7px 0px;
+          background-color: $primaryBackgroundColor;
+          border-radius: 5px;
+          position: absolute;
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3),
+            -5px 5px 5px rgba(0, 0, 0, 0.3);
+          z-index: 10;
+
+          &-item {
+            background-color: $primaryBackgroundColor;
+            padding: 5px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.2s all ease-in-out;
+
+            &:hover {
+              background-color: $accentColor;
+              // box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3),
+              //   -5px 5px 5px rgba(0, 0, 0, 0.3);
+            }
+          }
+          &.hidden {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &-time-and-data {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &-time {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 5rem;
+        color: $secondaryColor;
+        margin-bottom: 30px;
+      }
+      &-average {
+        color: $secondaryColor;
+      }
+      &-buttons {
+        height: 7vh;
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button {
+          height: 50px;
+          width: 90px;
+          font-size: 20px;
+          margin: 0px 20px;
+          background-color: $primaryBackgroundColor;
+          color: $primaryColor;
+          border-radius: 5px;
+          border: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          outline: none;
+          transition: 0.3s all ease-in-out;
+
+          &:hover {
+            background-color: $primaryColor;
+            color: $accentColor;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3),
+              -5px 5px 5px rgba(0, 0, 0, 0.3);
+          }
+          // &:focus {
+          //   background-color: $primaryColor;
+          //   color: $accentColor;
+          // }
+        }
+      }
+    }
+    &-guide {
+      &-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .button-div {
+          height: 20px;
+          width: 70px;
+          background-color: $primaryColor;
+          color: $secondaryBackgroundColor;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 5px;
+          font-size: 0.8rem;
+          font-weight: 600;
+          margin: 0px 10px;
+        }
+        h3 {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}

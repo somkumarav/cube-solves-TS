@@ -1,0 +1,114 @@
+.User {
+  .user-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h2 {
+        color: $secondaryColor;
+      }
+    }
+  }
+  .user-all-solves {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-header {
+      height: 40px;
+      width: 100%;
+      padding: 0px 10px;
+      display: flex;
+      align-items: center;
+      background-color: $secondaryBackgroundColor;
+      border-bottom: 2px solid $secondaryColor;
+      color: $secondaryColor;
+
+      &-time {
+        width: 10%;
+        text-align: left;
+        font-weight: 500;
+      }
+      &-scramble {
+        width: 90%;
+        text-align: center;
+        font-weight: 500;
+      }
+      &-date {
+        width: 20%;
+        text-align: right;
+        font-weight: 500;
+      }
+    }
+    &-item {
+      height: 40px;
+      width: 100%;
+      padding: 0px 10px;
+      display: flex;
+      align-items: center;
+
+      &-time {
+        width: 10%;
+        text-align: left;
+        font-weight: 500;
+        font-size: 0.9rem;
+      }
+      &-scramble {
+        width: 90%;
+        text-align: center;
+        font-weight: 500;
+        font-size: 0.9rem;
+      }
+      &-date {
+        width: 15%;
+        text-align: right;
+        font-weight: 500;
+        font-size: 0.9rem;
+      }
+      &.dark {
+        background-color: $secondaryBackgroundColor;
+      }
+    }
+    &-no-solve {
+      margin-top: 50px;
+      h2 {
+        color: $secondaryColor;
+        font-size: 2.5rem;
+      }
+    }
+    &-pagination {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &-button {
+        height: 45px;
+        width: 80%;
+        margin: 10px 0px;
+        background-color: $secondaryBackgroundColor;
+        color: $secondaryColor;
+        border: none;
+        border-radius: 7px;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2),
+          -4px 4px 4px rgba(0, 0, 0, 0.2);
+        font-size: 1.3rem;
+        font-weight: 600;
+        transition: 0.3s all ease-in-out;
+
+        &:hover {
+          background-color: $primaryColor;
+          color: $secondaryBackgroundColor;
+        }
+      }
+    }
+  }
+}

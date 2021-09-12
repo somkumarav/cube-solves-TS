@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&display=swap');
+
+$primaryColor: #847869;
+$secondaryColor: #fae1c3;
+
+$primaryBackgroundColor: #202020;
+$secondaryBackgroundColor: #1d1d1d;
+$accentColor: #91170c;
+
+$robotoMono: 'Roboto Mono', monospace;
+$barlow: 'Barlow', sans-serif;
+// $poppins: 'Poppins', sans-serif;
+// $daysOne: 'Days One', sans-serif;
+// $monteserratSubrayada: 'Montserrat Subrayada', sans-serif;
+// $teko: 'Teko', sans-serif;
+// $doHyeon: 'Do Hyeon', sans-serif;
+
+$fontSizes: (
+  'x-large': 2.3rem,
+  'large': 1.5rem,
+  'regular': 1rem,
+  'small': 0.8rem,
+);
+
+@function sizes($size-name) {
+  @return map-get($fontSizes, $size-name);
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: $primaryColor $secondaryBackgroundColor;
+}
+
+html::-webkit-scrollbar {
+  width: 0.5vw;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: #84786998;
+  // background-color: $primaryColor;
+  // opacity: 0.2;
+}
+html::-webkit-scrollbar-thumb:hover {
+  background-color: $primaryColor;
+}
+html::-webkit-scrollbar-track {
+  background-color: $secondaryBackgroundColor;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: $robotoMono;
+  outline: none;
+}
+.container {
+  width: 50%;
+  margin: 0 auto;
+}
+h1 {
+  font-size: sizes(x-large);
+  font-weight: 500;
+}
+h2 {
+  font-size: sizes(large);
+}
+h3 {
+  font-size: sizes(regular);
+}
+h4 {
+  font-size: sizes(small);
+}
