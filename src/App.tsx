@@ -15,6 +15,8 @@ export interface Solve {
   time: number;
   cube: string;
   scramble: string[];
+  date: string;
+  comment: string;
 }
 
 const getallDataFromLocalStorage = () => {

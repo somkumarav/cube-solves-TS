@@ -5,7 +5,9 @@ $primaryColor: #847869;
 $secondaryColor: #fae1c3;
 
 $primaryBackgroundColor: #202020;
+// $primaryBackgroundColor: #151718;
 $secondaryBackgroundColor: #1d1d1d;
+// $accentColor: #141e26;
 $accentColor: #91170c;
 
 $robotoMono: 'Roboto Mono', monospace;
@@ -30,6 +32,7 @@ $fontSizes: (
 html {
   scrollbar-width: thin;
   scrollbar-color: $primaryColor $secondaryBackgroundColor;
+  overflow-y: scroll;
 }
 
 html::-webkit-scrollbar {

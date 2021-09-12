@@ -37,13 +37,15 @@ export const useTimer = (
           clearInterval(increment.current as NodeJS.Timeout);
           setMyState(2);
           refreshScramble();
-          const id = new Date().getTime();
-          setPrevId(id);
+          const id = new Date();
+          setPrevId(id.getTime());
           const newSolve = {
-            id: id,
+            id: id.getTime(),
             time: timer,
             scramble: scramble,
             cube: cube,
+            date: `${id.getUTCDate()}-${id.getMonth()}-${id.getFullYear()}`,
+            comment: '',
           };
           addSolve(newSolve);
         }

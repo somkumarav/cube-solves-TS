@@ -1,3 +1,4 @@
+// This is not a Hook
 export const convert = (time: number) => {
   const diff = time;
   const seconds = Number(((diff % 100000) % 60000) / 1000)

@@ -1,4 +1,5 @@
 .User {
+  // transition: 1s all ease-in-out;
   .user-header {
     display: flex;
     justify-content: space-between;
@@ -54,6 +55,7 @@
       padding: 0px 10px;
       display: flex;
       align-items: center;
+      cursor: pointer;
 
       &-time {
         width: 10%;
@@ -75,6 +77,8 @@
       }
       &.dark {
         background-color: $secondaryBackgroundColor;
+      }
+      &:hover {
       }
     }
     &-no-solve {
