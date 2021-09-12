@@ -1,4 +1,4 @@
-// Currently we are not using this hook insted it implemented in App.tsx
+// Currently we are not using this hook insted it implemented in ./useLS.ts
 // I really want to useThis hook but it has some problems
 import { useEffect, useState } from 'react';
 

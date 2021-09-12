@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Footer } from './components/Footer';
 import { Nav } from './components/Nav';
 import { convert } from './hooks/convertTime';
+import { useLS } from './hooks/useLS';
 import { About } from './pages/About';
 import { Home } from './pages/Home';
 import { Leaderboard } from './pages/Leaderboard';
@@ -31,32 +32,7 @@ const App = () => {
   const [allSolves, setAllSolves] = useState<Solve[]>(
     getallDataFromLocalStorage()
   );
-
-  useEffect(() => {
-    if (allSolves.length > 10000) {
-      setAllSolves((allSolves) => allSolves.slice(0, 10000));
-    }
-    localStorage.setItem('Allsolve', JSON.stringify(allSolves));
-  }, [allSolves]);
-
-  // FUNCTIONS
-  const addSolve = (newSolve: Solve) => {
-    setAllSolves([newSolve, ...allSolves]);
-  };
-  const deleteSolve = (id: number) => {
-    const newData = allSolves.filter((item) => item.id !== id);
-    setAllSolves(newData);
-  };
-  const addPenalty = (id: number) => {
-    setAllSolves(
-      allSolves.map((item) => {
-        if (item.id === id) {
-          return { ...item, time: item.time + 2000 };
-        }
-        return item;
-      })
-    );
-  };
+  const { addSolve, deleteSolve, addPenalty } = useLS(allSolves, setAllSolves);
 
   const findAverage = (loop: number, currentCube: string) => {
     let sum = 0;
