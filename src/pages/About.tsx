@@ -115,10 +115,10 @@ export const About: React.FC = () => {
 
         <div className="about-body-section">
           <p>
-            <span>Open-source: </span>cubeSolves is completely open-source i.e
-            source code is publicly available and you can contribute to the
-            website and can report a bug in the website via the above-mentioned
-            ways.
+            <span>Open-source: </span>
+            {appName} is completely open-source i.e source code is publicly
+            available and you can contribute to the website and can report a bug
+            in the website via the above-mentioned ways.
           </p>
         </div>
 

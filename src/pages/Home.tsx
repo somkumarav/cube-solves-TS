@@ -4,6 +4,7 @@ import { Solve } from '../App';
 import { useScramble } from '../hooks/useScramble';
 import { useTimer } from '../hooks/useTimer';
 import { cubes } from '../utils';
+import { AddSolve } from '../components/AddSolve';
 
 interface Props {
   deleteSolve: (id: number) => void;
@@ -70,6 +71,11 @@ export const Home: React.FC<Props> = ({
 
   return (
     <div className="Home container">
+      <AddSolve
+        addSolve={addSolve}
+        currentCube={currentCube}
+        scramble={scramble}
+      />
       <div className="home-header">
         <div className="home-header-change-cube">
           <div

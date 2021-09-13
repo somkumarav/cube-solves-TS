@@ -144,6 +144,29 @@
   }
 }
 
+// ADDSOLVE
+//===============
+.AddSolve {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-items: center;
+  z-index: 10;
+
+  .addSolve-content {
+    height: 70vh;
+    width: 40vw;
+    background-color: $secondaryBackgroundColor;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 // --component-name--
 //===============
 // &-header {
