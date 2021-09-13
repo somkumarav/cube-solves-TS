@@ -29,6 +29,7 @@ export const Home: React.FC<Props> = ({
   const [currentCube, setCurrentCube] = useState<string>('3x3');
   const [isTabed, setIsTabed] = useState<boolean>(false);
   const [showList, setShowList] = useState<boolean>(false);
+  const [showModal, setShowModal] = useState<boolean>(false);
   const { scramble, refreshScramble } = useScramble(currentCube);
   const { prevId, format } = useTimer(
     refreshScramble,
@@ -49,12 +50,17 @@ export const Home: React.FC<Props> = ({
         refreshScramble();
         setIsTabed(false);
       }
+      if (e.code === 'Escape') {
+        e.preventDefault();
+        if (showModal) setShowModal(false);
+        if (!showModal) setShowModal(true);
+      }
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [isTabed, refreshScramble]);
+  }, [isTabed, refreshScramble, showModal]);
 
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
@@ -71,11 +77,13 @@ export const Home: React.FC<Props> = ({
 
   return (
     <div className="Home container">
-      <AddSolve
-        addSolve={addSolve}
-        currentCube={currentCube}
-        scramble={scramble}
-      />
+      {showModal && (
+        <AddSolve
+          addSolve={addSolve}
+          currentCube={currentCube}
+          scramble={scramble}
+        />
+      )}
       <div className="home-header">
         <div className="home-header-change-cube">
           <div

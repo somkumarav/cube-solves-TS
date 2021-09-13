@@ -1,4 +1,3 @@
-import { time } from 'console';
 import React, { useState } from 'react';
 import { Solve } from '../App';
 import { convertToNumber } from '../hooks/convertTime';
@@ -49,6 +48,7 @@ export const AddSolve: React.FC<Props> = ({
         <div className="addsolve-content-body">
           <input
             type="text"
+            placeholder="mm.ss.msms"
             value={timer}
             onChange={(e) => setTimer(e.target.value)}
           />
