@@ -1,0 +1,16 @@
+.Settings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .settings-left {
+    width: 15%;
+  }
+  .settings-right {
+    width: 85%;
+
+    &-item {
+      margin: 10px 0px;
+    }
+  }
+}
